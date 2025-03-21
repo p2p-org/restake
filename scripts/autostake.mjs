@@ -1,4 +1,7 @@
-import 'dotenv/config'
+import dotenv from 'dotenv';
+const envPath = process.env.ENV_PATH || '.env';
+dotenv.config({ path: envPath });
+
 import Autostake from "../src/autostake/index.mjs";
 
 const mnemonic = process.env.MNEMONIC
